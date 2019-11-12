@@ -1,0 +1,12 @@
+<div class="titlebar">
+  <h1><%= @article.title %></h1>
+  <div class="modify">
+    <%= link_to edit_article_path do %>
+      <i class="fas fa-pen"></i>
+    <% end %>
+    <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
+  </div>
+</div>
+<p><%= markdown(@article.content) %></p>

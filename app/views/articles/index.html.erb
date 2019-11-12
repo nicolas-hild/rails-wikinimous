@@ -1,0 +1,8 @@
+<ul class='articles-list'>
+  <% @articles.each do |article| %>
+    <li>
+      <h4><%= link_to article.title, article_path(article) %></h4>
+      <p><%= article.content.first(30) %>..</p>
+    </li>
+  <% end %>
+</ul>
